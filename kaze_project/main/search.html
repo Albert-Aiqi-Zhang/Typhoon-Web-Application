@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>Search</title>
+    
+    </head>
+
+    <style>p.indent{ padding-left: 1.8em }</style>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .search{
+            margin: 30px;
+            width: 210px;
+            height:35px;
+            border:1px solid silver ;
+        }
+        .search_key{
+            width: 150px;
+            height: 25px;
+            border: none;
+            margin-top: 5px; 
+            margin-left: 5px;     
+        }
+        .submit{
+            background:none;
+            margin-top: 5px;
+            width:40px;
+            height: 25px;
+            border: none;
+        /*这个添加背景图即可*/ 
+        }
+    </style>
+
+    <style type="text/css">
+        nav{
+            width: 100%;
+            height: 60px;	
+            background: rgba(0,0,0,.3);
+            position: absolute;
+            z-index: 10;
+        }
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li{
+            text-align: center;
+            float: left;
+            line-height: 60px;
+        }
+        nav ul li a{
+            width: 100px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            display: block;
+        }
+        nav ul li a:hover,nav ul li a:visited{
+            text-decoration: none;
+            background: rgba(0,0,0,.5);
+            color: #fff;
+        }
+        .words{font-size: 40px;
+                letter-spacing: 10px;
+                position: absolute;
+                top:50%;
+                left: 30%;}
+        .imgw{position: relative;}
+    </style>
+
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#nav{
+		background-color: #eee;
+		width: 360px;
+		height: 40px;
+		margin: 0 auto;
+	}
+	ul{
+		list-style: none;
+	}
+	ul li {
+		float: left;
+		line-height: 40px;
+		text-align: center;
+	}
+	a{
+		text-decoration: none;
+		color:#000;
+		padding: 0 10px;
+		display: block;	
+	}
+	a:hover{
+		color: #fff;
+		background-color: #666;
+	}
+	ul li ul li{
+		float: none;
+		background-color: #eee;
+		margin-top: 2px;
+	}
+	ul li ul {
+		position: absolute;
+		display: none;
+	}
+	ul li ul li a:hover{
+		background-color: #06f;
+	}
+	ul li:hover ul{
+		display: block;
+    }
+	</style>
+
+    <body>
+        <nav>
+            <ul>
+                <li class="active"><a href="homepage.html">Homepage</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="no_image.html">Images</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+
+        <h1><br>
+        <h1><br><font color="blue"> <p class="indent"></p> <center>
+            Search for typhoon! </center></font></h1>
+        <br>
+        <!--
+        <div align="center">
+            <form action="demo_form.php"method="get">
+                请输入搜索关键字: <input type="search" name="search1"/>
+                <input type="submit"  value="search!" style="width:200px; height:200px;"/>
+            </form>    
+        </div>
+        -->
+        <h3>
+        <form name="form2" action="upload search" method="post" enctype="text/plain">
+            <div align="center">
+            <table width="40%" border="1" bgcolor="#00FF00"
+                cellpadding="4" align="center">
+            <tr> 
+            <td colspan="2" bgcolor="#00FF00"> <div align="center"><b>Search for typhoon by years</b></div> </td>
+            </tr>
+            <tr> 
+            <!---    
+            <td>Name of typhoon: <input type="text" name="textfield" size="20" maxlength="20"> </td>     
+            <td>Time of typhoon <input type="text" name="textfield2" size="20" maxlength="20"> </td>
+            -->
+            </tr>
+            <tr> 
+            <td colspan="2"> <div align="center"><tr rowspan=2> </tr>
+                <br>
+                <!-- <textarea name="textfield3" cols="30" rows="3"></textarea> -->
+                <!--
+                <li><a href="#">2001</a></li>
+                <li><a href="#">2002</a></li>
+                <li><a href="#">2003</a></li>
+                <li><a href="#">2004</a></li>
+                <li><a href="#">2005</a></li>
+                <li><a href="#">2006</a></li>
+                <li><a href="#">2007</a></li>
+                <li><a href="#">2008</a></li>
+                <li><a href="#">2009</a></li>
+                <li><a href="#">2010</a></li>
+                <li><a href="#">2011</a></li>
+                <li><a href="#">2012</a></li>
+                <li><a href="#">2013</a></li>
+                <li><a href="#">2014</a></li>
+                <li><a href="#">2015</a></li>
+                <li><a href="#">2016</a></li>
+                <li><a href="#">2017</a></li>
+                <li><a href="#">2018</a></li>
+                -->
+            </div>
+            </td>
+
+
+            <div align="center">
+            <td rowspan=3>
+                <table border=1><tr rowspan=6>Please select a year from 2001 to 2018: </tr>
+                    <tr><td rowspan=1><li><a href="http://0.0.0.0:5000/year?year=2001">2001</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2002">2002</a></li></td> 
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2003">2003</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2004">2004</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2005">2005</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2006">2006</a></li></td>
+                    </tr><tr>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2007">2007</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2008">2008</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2009">2009</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2010">2010</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2011">2011</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2012">2012</a></li></td>
+                    </tr><tr>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2013">2013</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2014">2014</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2015">2015</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2016">2016</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2017">2017</a></li></td>
+                    <td><li><a href="http://0.0.0.0:5000/year?year=2018">2018</a></li></td>
+                    </tr>
+                    </table>
+                </div>            
+            </tr>
+            <tr> 
+            <!--
+            <td> <div align="center"> <input type="submit" name="Submit" value="Submit"> </div> </td>
+            <td> <div align="center"> <input type="reset" name="Submit2" value="Reset"> </td></div> 
+            -->
+            </tr>
+            </table>
+
+            </div>
+            </form>
+        </h3>
+
+        <br><br>
+        <div align="center">
+            <img src="static/typhoon_another.jpg"  height="300"
+                width="400" alt="static/typhoon_another.jpg"/> 
+        </div>
+    </body>
+</html>

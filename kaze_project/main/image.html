@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>Image</title>
+        <style>p.indent{ padding-left: 1.8em }</style>
+    </head>
+
+    <style>p.indent{ padding-left: 1.8em }</style>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .search{
+            margin: 30px;
+            width: 210px;
+            height:35px;
+            border:1px solid silver ;
+        }
+        .search_key{
+            width: 150px;
+            height: 25px;
+            border: none;
+            margin-top: 5px; 
+            margin-left: 5px;     
+        }
+        .submit{
+            background:none;
+            margin-top: 5px;
+            width:40px;
+            height: 25px;
+            border: none;
+        /*这个添加背景图即可*/ 
+        }
+    </style>
+
+    <style type="text/css">
+        nav{
+            width: 100%;
+            height: 60px;	
+            background: rgba(0,0,0,.3);
+            position: absolute;
+            z-index: 10;
+        }
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li{
+            text-align: center;
+            float: left;
+            line-height: 60px;
+        }
+        nav ul li a{
+            width: 100px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            display: block;
+        }
+        nav ul li a:hover,nav ul li a:visited{
+            text-decoration: none;
+            background: rgba(0,0,0,.5);
+            color: #fff;
+        }
+        .words{font-size: 40px;
+                letter-spacing: 10px;
+                position: absolute;
+                top:50%;
+                left: 30%;}
+        .imgw{position: relative;}
+    </style>
+
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#nav{
+		background-color: #eee;
+		width: 360px;
+		height: 40px;
+		margin: 0 auto;
+	}
+	ul{
+		list-style: none;
+	}
+	ul li {
+		float: left;
+		line-height: 40px;
+		text-align: center;
+	}
+	a{
+		text-decoration: none;
+		color:#000;
+		padding: 0 10px;
+		display: block;	
+	}
+	a:hover{
+		color: #fff;
+		background-color: #666;
+	}
+	ul li ul li{
+		float: none;
+		background-color: #eee;
+		margin-top: 2px;
+	}
+	ul li ul {
+		position: absolute;
+		display: none;
+	}
+	ul li ul li a:hover{
+		background-color: #06f;
+	}
+	ul li:hover ul{
+		display: block;
+    }
+	</style>
+
+    <body>
+        <nav>
+            <ul>
+                <li class="active"><a href="homepage.html">Homepage</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="no_image.html">Images</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+
+        <!--
+        <h1><br><br><br></h1>
+        <div align="center">
+            <form> 
+                <input name="mytext" type="text" />       
+                <input type="submit" value="search" />
+            </form>
+        </div>
+        -->
+
+        <br><br><br>
+        <!-- upload pictures
+        <div style="width:100px;float:left;margin-left:35px;">
+            <form method="post" enctype="multipart/form-data" id="test_form" style="margin-top:45px;">
+                 <a href="javascript:;" class="file button red">选择照片
+                 <input type="file" name="photo" id="photo">
+                  </a>
+                 <a type="button" class="file button red" id="tj" onclick="ajaxForm()">上传照片</a>
+                 <a class="file button red" data-reveal-id="myModal">手动裁剪</a>
+            </form>
+        </div>
+        -->
+        <div align="center">
+        <br>
+        <h2><font color="green"><p class="indent"></p> Typhoon {{ name }} ( {{ typhoon_number }} )</font></h2>
+        <img src= {{ path }} alt="static/result.png"/> 
+        </div>
+
+        <h3>
+                <form name="form2" action="upload search" method="post" enctype="text/plain">
+                    <div align="center">
+                    <table width="40%" border="1" bgcolor="#00FF00"
+                        cellpadding="4" align="center">
+                    <tr> 
+                    <td colspan="2" bgcolor="#00FF00"> <div align="center"><b>Typhoon Details</b> </td>
+                    </tr>
+                    <tr> 
+                    </tr>
+                    <tr> 
+                    <td colspan="2"> <div align="center"><tr rowspan=2> </tr>
+                        <br>
+
+                    
+                    </td>
+                        <tr><td>typhoon name </td><td> {{ name }}</td></tr>
+                        <tr><td>year </td><td> {{ year}}</td></tr>
+                        <tr><td>typhoon number </td><td> No. {{ typhoon_number }}</td></tr>
+                        <tr><td>start time </td><td> {{ start_time }}</td></tr>
+                        <tr><td>end time </td><td> {{ end_time }}</td></tr>
+                        <tr><td>typhoon class </td><td>
+                            {% if typhoon_class | int <= 4  %}
+                                Level {{ typhoon_class }}
+                            {% else %}
+                                <font color="red"> Level {{ typhoon_class }} </font>
+                            {% endif %} </tr></td>
+                        <tr><td>max velocity </td><td> {{ max_velocity }} (knot)</td></tr>
+                        <tr><td>landing </td><td> 
+                            {% if landing == '0'  %}
+                                No
+                            {% else %}
+                                Yes
+                            {% endif %}
+                            </tr>
+                        </div>            
+                    </tr>
+                    <tr> 
+                    <!--
+                    <td> <div align="center"> <input type="submit" name="Submit" value="Submit"> </div> </td>
+                    <td> <div align="center"> <input type="reset" name="Submit2" value="Reset"> </td></div> 
+                    -->
+                    </tr>
+                    </table>
+        
+                    </div>
+                    <br><br>
+                    </form>
+                </h3>
+
+    </body>
+</html>

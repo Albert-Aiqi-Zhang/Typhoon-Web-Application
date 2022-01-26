@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>台風の世界へようこそ！</title>
+        <!-- filter: alpha(opacity=15);-->
+        <style type="text/css">
+            .content {
+                color: #c50f0f;
+                font-size: 80px;
+            }
+            .bg {
+                background: url('static/typhoon.jpg/');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height:600px;
+                text-align: center;
+                line-height: 600px;
+            }
+            .bg-blur {
+            float: left;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            -webkit-filter: blur(7px);
+            -moz-filter: blur(7px);
+            -o-filter: blur(7px);
+            -ms-filter: blur(7px);
+            filter: blur(7px);
+            }
+            .content-front {
+            position:absolute;
+            left: 10px;
+            right: 10px;
+            height:600px;
+            line-height: 600px;
+            text-align: center;
+            -webkit-animation: shake 2.2s infinite;
+            animation: shake 2.2s infinite;
+            }
+        </style>
+            <style>p.indent{ padding-left: 1.8em }</style>
+            <style>
+                *{
+                    margin: 0;
+                    padding: 0;
+                }
+                .search{
+                    margin: 30px;
+                    width: 210px;
+                    height:35px;
+                    border:1px solid silver ;
+                }
+                .search_key{
+                    width: 150px;
+                    height: 25px;
+                    border: none;
+                    margin-top: 5px; 
+                    margin-left: 5px;     
+                }
+                .submit{
+                    background:none;
+                    margin-top: 5px;
+                    width:40px;
+                    height: 25px;
+                    border: none;
+                /*这个添加背景图即可*/ 
+                }
+            </style>
+        
+            <style type="text/css">
+                nav{
+                    width: 100%;
+                    height: 60px;	
+                    background: rgba(0,0,0,.3);
+                    position: absolute;
+                    z-index: 10;
+                }
+                nav ul{
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+                nav ul li{
+                    text-align: center;
+                    float: left;
+                    line-height: 60px;
+                }
+                nav ul li a{
+                    width: 100px;
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: 600;
+                    display: block;
+                }
+                nav ul li a:hover,nav ul li a:visited{
+                    text-decoration: none;
+                    background: rgba(0,0,0,.5);
+                    color: #fff;
+                }
+                .words{font-size: 40px;
+                        letter-spacing: 10px;
+                        position: absolute;
+                        top:50%;
+                        left: 30%;}
+                .imgw{position: relative;}
+            </style>
+        
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #nav{
+                background-color: #eee;
+                width: 360px;
+                height: 40px;
+                margin: 0 auto;
+            }
+            ul{
+                list-style: none;
+            }
+            ul li {
+                float: left;
+                line-height: 40px;
+                text-align: center;
+            }
+            a{
+                text-decoration: none;
+                color:#000;
+                padding: 0 10px;
+                display: block;	
+            }
+            a:hover{
+                color: #fff;
+                background-color: #666;
+            }
+            ul li ul li{
+                float: none;
+                background-color: #eee;
+                margin-top: 2px;
+            }
+            ul li ul {
+                position: absolute;
+                display: none;
+            }
+            ul li ul li a:hover{
+                background-color: #06f;
+            }
+            ul li:hover ul{
+                display: block;
+            }
+            </style>
+    </head>
+
+    <style type="text/css">
+        nav{
+            width: 100%;
+            height: 60px;	
+            background: rgba(0,0,0,.3);
+            position: absolute;
+            z-index: 10;
+        }
+        nav ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li{
+            text-align: center;
+            float: left;
+            line-height: 60px;
+        }
+        nav ul li a{
+            width: 100px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            display: block;
+        }
+        nav ul li a:hover,nav ul li a:visited{
+            text-decoration: none;
+            background: rgba(0,0,0,.5);
+            color: #fff;
+        }
+        .words{font-size: 40px;
+                letter-spacing: 10px;
+                position: absolute;
+                top:50%;
+                left: 30%;}
+        .imgw{position: relative;}
+    </style>
+
+    <style>
+    @-webkit-keyframes shake {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.8;
+    }
+    }
+
+    @keyframes shake {
+        0% {
+            opacity: 0.8;
+        }
+        50% {
+            opacity: 0.4;
+        }
+        100% {
+            opacity: 0.8;
+        }
+    }
+
+    .shake {
+        -webkit-animation: shake 2.2s infinite;
+        animation: shake 2.2s infinite;
+        text-align: center;
+    }</style>
+
+    <body>
+        <nav>
+            <ul>
+                <li class="active"><a href="homepage.html">Homepage</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="#">Images</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <!--
+        <div class="imgw">
+                <img src="img/typhoon.jpg" alt= "" width="100%">
+                <!-- <div class="words">hi</div> -->
+        <!--
+        <img src="img/typhoon_long.png"  width="100%"
+            alt="typhoon-background"/> 
+        <button type="button" class="btn" style="background-color:rgb(0, 255, 42);
+            width:100px; height: 60px; color:rgb(4, 6, 7);
+            position: relative; left: 30px; top:30px">Click me!</button>
+        -->
+        <div>
+                <div class="bg bg-blur"></div>
+                <div class="content content-front">Welcome to the World of Typhoon!</div>
+            </div>
+        </div>
+
+
+    </body>
+
+
+
+
+
+
+
+</html>
+
