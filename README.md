@@ -24,5 +24,3 @@ Then you can choose any typhoon, and it will diplay typhoon track and some corre
  
 Although it's a pity that you cannot see it here, you can still download the whole repository and open a server to run it perfectly. Hopefully you enjoyed my typhoon website!
 
-![no-image](https://github.com/Albert-Aiqi-Zhang/Typhoon-Web-Application/blob/main/images/noImage.png)
-
