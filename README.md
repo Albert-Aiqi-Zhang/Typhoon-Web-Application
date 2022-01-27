@@ -2,7 +2,7 @@
 
 Welcome to the World of Typhoon! I built a website and database to display typhoon information from 2000 through 2018 with flask framework and MySQL.
 
-You can click this link to see the sample of my website: [typhoon website](https://albert-aiqi-zhang.github.io/typhoon.github.io/index.html)
+You can click this link to see the sample of my website: [(simpified) typhoon website](https://albert-aiqi-zhang.github.io/typhoon.github.io/index.html)
 
 ![typhoon](https://github.com/Albert-Aiqi-Zhang/Typhoon-Web-Application/blob/main/images/homepage.png)
 
